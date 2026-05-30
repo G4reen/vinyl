@@ -1,27 +1,31 @@
 # VinylFlow: Pipeline Automatizado de DataOps para Inventario de Vinilos
 
-Este proyecto implementa un pipeline de datos modular, contenerizado y automatizado bajo los principios de la cultura **DataOps** para la gestión, normalización y aseguramiento de la calidad del inventario global de una distribuidora de música y discos de vinilo.
+Este proyecto implementa un pipeline de datos modular, contenerizado y automatizado bajo los principios de la cultura **DataOps** para la gestión, normalización y aseguramiento de la calidad del inventario de una distribuidora de música y discos de vinilo.
 
-La solución aborda problemáticas críticas de consistencia operativa, tales como la duplicidad de catálogos, registros con errores de formato y anomalías semánticas de negocio (precios inválidos o valores de stock negativos).
+La solución aborda de forma resiliente problemáticas críticas de completitud y consistencia operativa en lotes masivos de datos (escalables a más de 500 registros), tales como la duplicidad de catálogos, registros con celdas vacías y anomalías semánticas de negocio (precios invertidos o valores de stock negativos).
 
 ## 📊 Arquitectura del Proyecto
 
-El flujo de software sigue una estructura puramente modular para garantizar la mantenibilidad, escalabilidad y el aislamiento de responsabilidades:
+El flujo de software sigue una estructura modular estricta para garantizar la mantenibilidad, aislamiento de responsabilidades y el desacoplamiento de las etapas del ciclo de vida del dato:
 
 ```text
 ├── data/
-│   ├── vinilos.csv                 # BASE DE DATOS DE VINILOS
-│   └── dw_vinylflow.db             # Data Warehouse relacional final (SQLite)
+│   ├── vinilos.csv                 # Archivo fuente crudo en texto plano
+│   └── dw_vinylflow.db             # Data Warehouse relacional de destino (SQLite)
 ├── data_quality/
-│   └── validador.py                # Validación estructural y semántica de negocio
+│   └── validador.py                # Control de calidad, completitud y consistencia
 ├── ingestion/
 │   └── ingesta.py                  # Extracción segura de archivos físicos del disco
 ├── logs/
-│   ├── anomalias_precios_detectadas.log  # Registros aislados por fallas de precio
-│   ├── anomalias_stock_corregidas.log    # Historial de registros con stock corregido
-│   └── ejecucion_pipeline_YYYYMMDD.log   # Historial técnico con marcas de tiempo
+│   ├── anomalias_artistas_faltantes.log # Trazas de registros con artista ausente
+│   ├── anomalias_nulos_descartados.log  # Registros omitidos por ausencia de SKU o Precio
+│   ├── anomalias_precios_corregidos.log # Historial de precios invertidos transformados
+│   ├── anomalias_precios_descartados.log# Registros descartados por precio equivalente a cero
+│   ├── anomalias_stock_corregidas.log   # Historial de registros con stock modificado
+│   ├── anomalias_titulos_faltantes.log  # Trazas de registros con título ausente
+│   └── ejecucion_pipeline_YYYYMMDD.log  # Historial técnico unificado con marcas de tiempo
 ├── procesamiento/
-│   └── transformacion.py           # Limpieza, casting y feature engineering
+│   └── transformacion.py           # Limpieza básica, casting y feature engineering
 ├── Dockerfile                      # Definición de la imagen inmutable del entorno
-├── pipeline.py                     # Orquestador principal del ciclo de vida del dato
+├── pipeline.py                     # Orquestador principal y configurador de logging
 └── requirements.txt                # Dependencias estrictas del proyecto
