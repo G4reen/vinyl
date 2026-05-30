@@ -1,0 +1,189 @@
+sku,titulo,artista,precio_clp,stock
+VIN-001,Random Access Memories,Daft Punk,45000,15
+VIN-002,The Dark Side of the Moon,Pink Floyd,-12000,8
+VIN-003,  Abbey Road  ,The Beatles,38000,22
+VIN-001,Random Access Memories,Daft Punk,45000,15
+VIN-004,Blonde,Frank Ocean,60000,0
+VIN-005,Nevermind,Nirvana,35000,12
+VIN-006,  Discovery  ,Daft Punk,42000,5
+VIN-007,Back to Black,Amy Winehouse,0,20
+VIN-008,Hotel California,Eagles,29990,18
+VIN-005,Nevermind,Nirvana,35000,12
+VIN-009,Kid A,Radiohead,39990,-3
+VIN-010,Currents,Tame Impala,41000,14
+VIN-011,The New Abnormal,The Strokes,-5000,9
+VIN-012,Rumours,Fleetwood Mac,37500,25
+VIN-013,  To Pimp a Butterfly  ,Kendrick Lamar,55000,7
+VIN-014,Ok Computer,Radiohead,43000,11
+VIN-015,Born to Run,Bruce Springsteen,32000,19
+VIN-016,Blue Lines,Massive Attack,34000,-1
+VIN-017,Dummy,Portishead,36000,14
+VIN-018,Mezzanine,Massive Attack,0,5
+VIN-019,Homogenic,Bjork,38000,12
+VIN-020,Post,Bjork,38000,3
+VIN-021,Vespertine,Bjork,41000,8
+VIN-022,In Rainbows,Radiohead,39500,16
+VIN-023,A Moon Shaped Pool,Radiohead,42000,7
+VIN-024,The Bends,Radiohead,35000,0
+VIN-025,Hail to the Thief,Radiohead,37000,11
+VIN-026,Amnesiac,Radiohead,37000,5
+VIN-027,Turn On the Bright Lights,Interpol,33000,-5
+VIN-028,Antics,Interpol,31000,14
+VIN-029,Our Love to Admire,Interpol,34000,9
+VIN-030,Is This It,The Strokes,36000,20
+VIN-031,Room on Fire,The Strokes,36000,15
+VIN-032,First Impressions of Earth,The Strokes,38000,6
+VIN-033,Angles,The Strokes,34000,4
+VIN-034,Comedown Machine,The Strokes,32000,8
+VIN-035,Whatever People Say I Am That Is What I Am Not,Arctic Monkeys,35000,22
+VIN-036,Favourite Worst Nightmare,Arctic Monkeys,35000,18
+VIN-037,Humbug,Arctic Monkeys,37000,10
+VIN-038,Suck It and See,Arctic Monkeys,34000,14
+VIN-039,AM,Arctic Monkeys,39990,45
+VIN-040,Tranquility Base Hotel & Casino,Arctic Monkeys,36000,-2
+VIN-041,The Car,Arctic Monkeys,38000,13
+VIN-042,Lonerism,Tame Impala,39000,19
+VIN-043,Innerspeaker,Tame Impala,37000,8
+VIN-044,The Slow Rush,Tame Impala,42000,25
+VIN-045,Melodrama,Lord,36000,14
+VIN-046,Pure Heroine,Lord,34000,11
+VIN-047,Solar Power,Lord,35000,6
+VIN-048,  Demon Days  ,Gorillaz,42000,17
+VIN-049,Plastic Beach,Gorillaz,45000,13
+VIN-050,Gorillaz,Gorillaz,35000,9
+VIN-051,The Now Now,Gorillaz,33000,-1
+VIN-052,Song Machine,Gorillaz,38000,14
+VIN-053,Cracker Island,Gorillaz,39000,20
+VIN-054,Unknown Pleasures,Joy Division,34000,15
+VIN-055,Closer,Joy Division,34000,11
+VIN-056,Disintegration,The Cure,38000,16
+VIN-057,Pornography,The Cure,36000,7
+VIN-058,Bloodflowers,The Cure,35000,4
+VIN-059,The Queen Is Dead,The Smiths,36000,-4
+VIN-060,Meat Is Murder,The Smiths,34000,12
+VIN-061,The Smiths,The Smiths,34000,8
+VIN-062,Louder Than Bombs,The Smiths,45000,19
+VIN-063,Hatful of Hollow,The Smiths,38000,6
+VIN-064,Violator,Depeche Mode,39000,21
+VIN-065,Music for the Masses,Depeche Mode,37000,14
+VIN-066,Black Celebration,Depeche Mode,36000,0
+VIN-067,Ultra,Depeche Mode,35000,9
+VIN-068,Songs of Faith and Devotion,Depeche Mode,36000,5
+VIN-069,The Joshua Tree,U2,35000,18
+VIN-070,Achtung Baby,U2,37000,12
+VIN-071,War,U2,32000,-2
+VIN-072,Boy,U2,30000,7
+VIN-073,Grace,Jeff Buckley,34000,15
+VIN-074,Mellon Collie and the Infinite Sadness,The Smashing Pumpkins,65000,10
+VIN-075,Siamese Dream,The Smashing Pumpkins,42000,14
+VIN-076,Pisces Iscariot,The Smashing Pumpkins,38000,5
+VIN-077,Adore,The Smashing Pumpkins,39000,8
+VIN-078,Ten,Pearl Jam,36000,25
+VIN-079,Vs.,Pearl Jam,34000,17
+VIN-080,Vitalogy,Pearl Jam,35000,11
+VIN-081,No Code,Pearl Jam,36000,-1
+VIN-082,Yield,Pearl Jam,36000,9
+VIN-083,Dirt,Alice in Chains,38000,22
+VIN-084,Facelift,Alice in Chains,36000,14
+VIN-085,Jar of Flies,Alice in Chains,34000,30
+VIN-086,MTV Unplugged,Alice in Chains,42000,16
+VIN-087,Superunknown,Soundgarden,39000,13
+VIN-088,Badmotorfinger,Soundgarden,36000,8
+VIN-089,Down on the Upside,Soundgarden,37000,5
+VIN-090,Purple,Stone Temple Pilots,34000,12
+VIN-091,Core,Stone Temple Pilots,35000,-3
+VIN-092,Tiny Music,Stone Temple Pilots,34000,9
+VIN-093,Doolittle,Pixies,33000,15
+VIN-094,Surfer Rosa,Pixies,33000,11
+VIN-095,Bossanova,Pixies,34000,6
+VIN-096,Trompe le Monde,Pixies,34000,4
+VIN-097,Daydream Nation,Sonic Youth,42000,9
+VIN-098,Goo,Sonic Youth,36000,14
+VIN-099,Dirty,Sonic Youth,38000,11
+VIN-100,Loveless,My Bloody Valentine,45000,8
+VIN-101,Souvlaki,Slowdive,38000,16
+VIN-102,Just for a Day,Slowdive,35000,-2
+VIN-103,Slowdive,Slowdive,37000,12
+VIN-104,Everything Is Broken,Bob Dylan,32000,5
+VIN-105,Time Out of Mind,Bob Dylan,38000,7
+VIN-106,Modern Times,Bob Dylan,36000,9
+VIN-107,The Freewheelin,Bob Dylan,34000,14
+VIN-108,Highway 61 Revisited,Bob Dylan,36000,18
+VIN-109,Blonde on Blonde,Bob Dylan,45000,-1
+VIN-110,Blood on the Tracks,Bob Dylan,38000,13
+VIN-111,Harvest,Neil Young,34000,20
+VIN-112,After the Gold Rush,Neil Young,34000,11
+VIN-113,Harvest Moon,Neil Young,39000,15
+VIN-114,Rust Never Sleeps,Neil Young,35000,6
+VIN-115,Blue,Joni Mitchell,36000,10
+VIN-116,Court and Spark,Joni Mitchell,35000,8
+VIN-117,The Hissing of Summer Lawns,Joni Mitchell,36000,-3
+VIN-118,Ladies of the Canyon,Joni Mitchell,34000,12
+VIN-119,Horses,Patti Smith,35000,9
+VIN-120,Radio Ethiopia,Patti Smith,33000,4
+VIN-121,Easter,Patti Smith,34000,11
+VIN-122,Marquee Moon,Television,38000,15
+VIN-123,Adventure,Television,35000,6
+VIN-124,Pink Flag,Wire,36000,7
+VIN-125,Chairs Missing,Wire,36000,-2
+VIN-126,154,Wire,38000,5
+VIN-127,Crocodiles,Echo & the Bunnymen,32000,9
+VIN-128,Heaven Up Here,Echo & the Bunnymen,32000,11
+VIN-129,Porcupine,Echo & the Bunnymen,34000,13
+VIN-130,Ocean Rain,Echo & the Bunnymen,36000,17
+VIN-131,Rattlesnakes,Lloyd Cole,33000,4
+VIN-132,Steve McQueen,Prefab Sprout,35000,8
+VIN-133,Jordan: The Comeback,Prefab Sprout,38000,-5
+VIN-134,Imperial Bedroom,Elvis Costello,34000,12
+VIN-135,My Aim Is True,Elvis Costello,32000,15
+VIN-136,This Years Model,Elvis Costello,34000,11
+VIN-137,Armed Forces,Elvis Costello,34000,9
+VIN-138,The Stone Roses,The Stone Roses,38000,23
+VIN-139,Second Coming,The Stone Roses,36000,7
+VIN-140,Bummed,Happy Mondays,33000,10
+VIN-141,Pills n Thrills and Bellyaches,Happy Mondays,35000,-1
+VIN-142,Screamadelica,Primal Scream,39000,14
+VIN-143,Give Out But Dont Give Up,Primal Scream,35000,6
+VIN-144,Vanishing Point,Primal Scream,36000,8
+VIN-145,XTRMNTR,Primal Scream,38000,11
+VIN-146,Ladies and Gentlemen We Are Floating in Space,Spiritualized,42000,13
+VIN-147,Lazer Guided Melodies,Spiritualized,38000,5
+VIN-148,Pure Phase,Spiritualized,36000,-2
+VIN-149,Urban Hymns,The Verve,38000,25
+VIN-150,  A Northern Soul  ,The Verve,35000,9
+VIN-151,Storm in Heaven,The Verve,36000,4
+VIN-152,Definitely Maybe,Oasis,42000,40
+VIN-153,Whats the Story Morning Glory,Oasis,45000,55
+VIN-154,Be Here Now,Oasis,39000,18
+VIN-155,Standing on the Shoulder of Giants,Oasis,36000,-4
+VIN-156,Heathen Chemistry,Oasis,35000,11
+VIN-157,Parklife,Blur,36000,22
+VIN-158,The Great Escape,Blur,35000,14
+VIN-159,Blur,Blur,37000,19
+VIN-160,13,Blur,39000,8
+VIN-161,Think Tank,Blur,36000,6
+VIN-162,Different Class,Pulp,38000,31
+VIN-163,His n Hers,Pulp,-35000,-2
+VIN-164,This Is Hardcore,Pulp,38000,12
+VIN-165,We Love Life,Pulp,34000,5
+VIN-166,Suede,Suede,34000,14
+VIN-167,Dog Man Star,Suede,36000,9
+VIN-168,Coming Up,Suede,35000,16
+VIN-169,The Holy Bible,Manic Street Preachers,35000,7
+VIN-170,Everything Must Go,Manic Street Preachers,34000,-3
+VIN-171,This Is My Truth Tell Me Yours,Manic Street Preachers,34000,11
+VIN-172,Moseley Shoals,Ocean Colour Scene,35000,13
+VIN-173,Marchin Already,Ocean Colour Scene,34000,8
+VIN-174,Tellin Stories,The Charlatans,34000,10
+VIN-175,Us and Us Only,The Charlatans,34000,5
+VIN-176,Grand Prix,Teenage Fanclub,-33000,12
+VIN-177,Songs from Northern Britain,Teenage Fanclub,34000,-1
+VIN-178,Bandwagonesque,Teenage Fanclub,34000,9
+VIN-179,The It Girl,Sleeper,30000,6
+VIN-180,Spiders,Space,30000,11
+VIN-181,Attack of the Grey Lantern,Mansun,34000,8
+VIN-182,Six,Mansun,36000,4
+VIN-183,Static on the Radio,Jim Noir,28000,5
+VIN-184,The Hour of Bewilderbeast,Badly Drawn Boy,35000,-2
+VIN-185,About a Boy,Badly Drawn Boy,34000,12
+VIN-186,Have You Fed the Fish,Badly Drawn Boy,34000,7
