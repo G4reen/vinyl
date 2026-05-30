@@ -1,0 +1,75 @@
+2026-05-30 14:20:45,375 [INFO] =====================================================================
+2026-05-30 14:20:45,377 [INFO] INICIANDO EJECUCIÓN DEL PIPELINE AUTOMATIZADO - VINYLFLOW
+2026-05-30 14:20:45,378 [INFO] =====================================================================
+2026-05-30 14:20:45,378 [INFO] [PIPELINE] ETAPA 1/4: Iniciando proceso de ingesta de datos...
+2026-05-30 14:20:45,382 [INFO] [PIPELINE] Ingesta finalizada. Registros leidos del origen: 252
+2026-05-30 14:20:45,382 [INFO] ---------------------------------------------------------------------
+2026-05-30 14:20:45,383 [INFO] [PIPELINE] ETAPA 2/4: Iniciando normalizacion y transformacion...
+2026-05-30 14:20:45,395 [INFO] ---------------------------------------------------------------------
+2026-05-30 14:20:45,395 [INFO] [PIPELINE] ETAPA 3/4: Transfiriendo control al modulo de Data Quality...
+2026-05-30 14:20:45,396 [INFO] [DATA QUALITY] Iniciando control de calidad y completitud del set de datos...
+2026-05-30 14:20:45,396 [INFO] [DATA QUALITY] Verificacion Estructural: Esquema de columnas valido.
+2026-05-30 14:20:45,398 [WARNING] [DATA QUALITY] Alerta de Completitud: 3 registros sin titulo detectados. Asignando 'UNKNOWN ALBUM' y exportando traza.
+2026-05-30 14:20:45,401 [WARNING] [DATA QUALITY] Alerta de Completitud: 1 registros sin artista detectados. Asignando 'UNKNOWN ARTIST' y exportando traza.
+2026-05-30 14:20:45,404 [WARNING] [DATA QUALITY] Alerta Semantica: 29 registros con stock negativo detectados. Aplicando regla de imputacion automatica a cero.
+2026-05-30 14:20:45,408 [WARNING] [DATA QUALITY] Alerta Semantica: 10 registros con precio negativo detectados. Aplicando conversion a valor absoluto.
+2026-05-30 14:20:45,410 [INFO] [DATA QUALITY] Enriquecimiento: Columna 'valor_inventario_total' calculada exitosamente.
+2026-05-30 14:20:45,411 [WARNING] [DATA QUALITY] Alerta Semantica: 6 registros descartados por precio equivalente a cero. Detalle en 'logs/anomalias_precios_descartados.log'.
+2026-05-30 14:20:45,413 [INFO] [DATA QUALITY] Control de calidad finalizado correctamente.
+2026-05-30 14:20:45,414 [INFO] [PIPELINE] Data Quality finalizado. Registros aptos para produccion: 244
+2026-05-30 14:20:45,414 [INFO] ---------------------------------------------------------------------
+2026-05-30 14:20:45,414 [INFO] [PIPELINE] ETAPA 4/4: Iniciando persistencia en el Data Warehouse...
+2026-05-30 14:20:45,432 [INFO] [PIPELINE] Repositorio actualizado con exito. Destino: data/dw_vinylflow.db
+2026-05-30 14:20:45,432 [INFO] =====================================================================
+2026-05-30 14:20:45,433 [INFO] PIPELINE FINALIZADO EXITOSAMENTE - PROCESO COMPLETADO
+2026-05-30 14:20:45,433 [INFO] =====================================================================
+2026-05-30 14:21:10,362 [INFO] =====================================================================
+2026-05-30 14:21:10,362 [INFO] INICIANDO EJECUCIÓN DEL PIPELINE AUTOMATIZADO - VINYLFLOW
+2026-05-30 14:21:10,362 [INFO] =====================================================================
+2026-05-30 14:21:10,362 [INFO] [PIPELINE] ETAPA 1/4: Iniciando proceso de ingesta de datos...
+2026-05-30 14:21:10,365 [INFO] [PIPELINE] Ingesta finalizada. Registros leidos del origen: 252
+2026-05-30 14:21:10,365 [INFO] ---------------------------------------------------------------------
+2026-05-30 14:21:10,366 [INFO] [PIPELINE] ETAPA 2/4: Iniciando normalizacion y transformacion...
+2026-05-30 14:21:10,371 [INFO] ---------------------------------------------------------------------
+2026-05-30 14:21:10,371 [INFO] [PIPELINE] ETAPA 3/4: Transfiriendo control al modulo de Data Quality...
+2026-05-30 14:21:10,372 [INFO] [DATA QUALITY] Iniciando control de calidad y completitud del set de datos...
+2026-05-30 14:21:10,372 [INFO] [DATA QUALITY] Verificacion Estructural: Esquema de columnas valido.
+2026-05-30 14:21:10,375 [WARNING] [DATA QUALITY] Alerta de Completitud: 3 registros sin titulo detectados. Asignando 'UNKNOWN ALBUM' y exportando traza.
+2026-05-30 14:21:10,378 [WARNING] [DATA QUALITY] Alerta de Completitud: 1 registros sin artista detectados. Asignando 'UNKNOWN ARTIST' y exportando traza.
+2026-05-30 14:21:10,381 [WARNING] [DATA QUALITY] Alerta Semantica: 29 registros con stock negativo detectados. Aplicando regla de imputacion automatica a cero.
+2026-05-30 14:21:10,383 [WARNING] [DATA QUALITY] Alerta Semantica: 10 registros con precio negativo detectados. Aplicando conversion a valor absoluto.
+2026-05-30 14:21:10,386 [INFO] [DATA QUALITY] Enriquecimiento: Columna 'valor_inventario_total' calculada exitosamente.
+2026-05-30 14:21:10,387 [WARNING] [DATA QUALITY] Alerta Semantica: 6 registros descartados por precio equivalente a cero. Detalle en 'logs/anomalias_precios_descartados.log'.
+2026-05-30 14:21:10,388 [INFO] [DATA QUALITY] Control de calidad finalizado correctamente.
+2026-05-30 14:21:10,388 [INFO] [PIPELINE] Data Quality finalizado. Registros aptos para produccion: 244
+2026-05-30 14:21:10,388 [INFO] ---------------------------------------------------------------------
+2026-05-30 14:21:10,388 [INFO] [PIPELINE] ETAPA 4/4: Iniciando persistencia en el Data Warehouse...
+2026-05-30 14:21:10,411 [INFO] [PIPELINE] Repositorio actualizado con exito. Destino: data/dw_vinylflow.db
+2026-05-30 14:21:10,412 [INFO] =====================================================================
+2026-05-30 14:21:10,412 [INFO] PIPELINE FINALIZADO EXITOSAMENTE - PROCESO COMPLETADO
+2026-05-30 14:21:10,412 [INFO] =====================================================================
+2026-05-30 14:30:28,969 [INFO] =====================================================================
+2026-05-30 14:30:28,969 [INFO] INICIANDO EJECUCIÓN DEL PIPELINE AUTOMATIZADO - VINYLFLOW
+2026-05-30 14:30:28,969 [INFO] =====================================================================
+2026-05-30 14:30:28,970 [INFO] [PIPELINE] ETAPA 1/4: Iniciando proceso de ingesta de datos...
+2026-05-30 14:30:28,974 [INFO] [PIPELINE] Ingesta finalizada. Registros leidos del origen: 252
+2026-05-30 14:30:28,976 [INFO] ---------------------------------------------------------------------
+2026-05-30 14:30:28,976 [INFO] [PIPELINE] ETAPA 2/4: Iniciando normalizacion y transformacion...
+2026-05-30 14:30:28,984 [INFO] ---------------------------------------------------------------------
+2026-05-30 14:30:28,984 [INFO] [PIPELINE] ETAPA 3/4: Transfiriendo control al modulo de Data Quality...
+2026-05-30 14:30:28,984 [INFO] [DATA QUALITY] Iniciando control de calidad y completitud del set de datos...
+2026-05-30 14:30:28,984 [INFO] [DATA QUALITY] Verificacion Estructural: Esquema de columnas valido.
+2026-05-30 14:30:28,989 [WARNING] [DATA QUALITY] Alerta de Completitud: 3 registros sin titulo detectados. Asignando 'UNKNOWN ALBUM' y exportando traza.
+2026-05-30 14:30:28,997 [WARNING] [DATA QUALITY] Alerta de Completitud: 1 registros sin artista detectados. Asignando 'UNKNOWN ARTIST' y exportando traza.
+2026-05-30 14:30:29,002 [WARNING] [DATA QUALITY] Alerta Semantica: 29 registros con stock negativo detectados. Aplicando regla de imputacion automatica a cero.
+2026-05-30 14:30:29,005 [WARNING] [DATA QUALITY] Alerta Semantica: 10 registros con precio negativo detectados. Aplicando conversion a valor absoluto.
+2026-05-30 14:30:29,008 [INFO] [DATA QUALITY] Enriquecimiento: Columna 'valor_inventario_total' calculada exitosamente.
+2026-05-30 14:30:29,009 [WARNING] [DATA QUALITY] Alerta Semantica: 6 registros descartados por precio equivalente a cero. Detalle en 'logs/anomalias_precios_descartados.log'.
+2026-05-30 14:30:29,010 [INFO] [DATA QUALITY] Control de calidad finalizado correctamente.
+2026-05-30 14:30:29,010 [INFO] [PIPELINE] Data Quality finalizado. Registros aptos para produccion: 244
+2026-05-30 14:30:29,010 [INFO] ---------------------------------------------------------------------
+2026-05-30 14:30:29,011 [INFO] [PIPELINE] ETAPA 4/4: Iniciando la carga de datos...
+2026-05-30 14:30:29,025 [INFO] [PIPELINE] Carga de datos realizada con exito. Destino: data/dw_vinylflow.db
+2026-05-30 14:30:29,025 [INFO] =====================================================================
+2026-05-30 14:30:29,025 [INFO] PIPELINE FINALIZADO EXITOSAMENTE - PROCESO COMPLETADO
+2026-05-30 14:30:29,025 [INFO] =====================================================================
