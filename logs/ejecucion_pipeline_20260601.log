@@ -1,0 +1,40 @@
+2026-06-01 06:04:32,203 [INFO] =====================================================================
+2026-06-01 06:04:32,203 [INFO] INICIANDO EJECUCIÓN DEL PIPELINE AUTOMATIZADO - VINYLFLOW
+2026-06-01 06:04:32,203 [INFO] =====================================================================
+2026-06-01 06:04:32,203 [INFO] [PIPELINE] ETAPA 1/4: Iniciando proceso de ingesta de datos...
+2026-06-01 06:04:32,203 [INFO] [Ingesta] Leyendo archivo físico desde: data/vinilos.csv
+2026-06-01 06:04:32,205 [INFO] [Ingesta] Ingesta exitosa. Registros leídos del CSV: 252
+2026-06-01 06:04:32,205 [INFO] [PIPELINE] Ingesta finalizada. Registros leidos del origen: 252
+2026-06-01 06:04:32,205 [INFO] ---------------------------------------------------------------------
+2026-06-01 06:04:32,205 [INFO] [PIPELINE] ETAPA 2/4: Iniciando normalizacion y transformacion...
+2026-06-01 06:04:32,205 [INFO] [Transformacion] Iniciando fase de transformacion y normalizacion...
+2026-06-01 06:04:32,209 [INFO] [Transformacion] Finalizada. Columnas actuales: ['sku', 'titulo', 'artista', 'precio_clp', 'stock', 'valor_inventario_total', 'segmento_disponibilidad']
+2026-06-01 06:04:32,209 [INFO] ---------------------------------------------------------------------
+2026-06-01 06:04:32,209 [INFO] [PIPELINE] ETAPA 3/4: Transfiriendo control al modulo de Data Quality...
+2026-06-01 06:04:32,210 [INFO] [DATA QUALITY] Iniciando control de calidad y completitud del set de datos...
+2026-06-01 06:04:32,210 [INFO] [DATA QUALITY] Verificacion Estructural: Esquema de columnas valido.
+2026-06-01 06:04:32,215 [WARNING] [DATA QUALITY] Alerta de Completitud: 3 registros sin titulo detectados. Asignando 'UNKNOWN ALBUM' y exportando traza.
+2026-06-01 06:04:32,220 [WARNING] [DATA QUALITY] Alerta de Completitud: 1 registros sin artista detectados. Asignando 'UNKNOWN ARTIST' y exportando traza.
+2026-06-01 06:04:32,223 [WARNING] [DATA QUALITY] Alerta Semantica: 29 registros con stock negativo detectados. Aplicando regla de imputacion automatica a cero.
+2026-06-01 06:04:32,227 [WARNING] [DATA QUALITY] Alerta Semantica: 10 registros con precio negativo detectados. Aplicando conversion a valor absoluto.
+2026-06-01 06:04:32,231 [INFO] [DATA QUALITY] Enriquecimiento: Columna 'valor_inventario_total' calculada exitosamente.
+2026-06-01 06:04:32,233 [WARNING] [DATA QUALITY] Alerta Semantica: 6 registros descartados por precio equivalente a cero. Detalle en 'logs/anomalias_precios_descartados.log'.
+2026-06-01 06:04:32,234 [INFO] [DATA QUALITY] Control de calidad finalizado correctamente.
+2026-06-01 06:04:32,234 [INFO] [PIPELINE] Data Quality finalizado. Registros aptos para produccion: 244
+2026-06-01 06:04:32,234 [INFO] ---------------------------------------------------------------------
+2026-06-01 06:04:32,234 [INFO] [PIPELINE] ETAPA 4/4: Iniciando carga incremental de datos...
+2026-06-01 06:04:32,237 [INFO] [Carga] Se encontraron 244 registros existentes en la base de datos.
+2026-06-01 06:04:32,238 [INFO] [Carga] Registros tras deduplicación incremental: 244
+2026-06-01 06:04:32,250 [INFO] [PIPELINE] Carga incremental exitosa. Total registros en BD: 244. Destino: data/dw_vinylflow.db
+2026-06-01 06:04:32,250 [INFO] [KPIs] ========== MÉTRICAS DE LA EJECUCIÓN ==========
+2026-06-01 06:04:32,250 [INFO] [KPIs] Registros válidos: 244 / 252 (96.8%)
+2026-06-01 06:04:32,251 [INFO] [KPIs] Registros descartados: 8
+2026-06-01 06:04:32,251 [INFO] [KPIs] Valor total del inventario procesado: $93,119,790 CLP
+2026-06-01 06:04:32,251 [INFO] [KPIs] STOCK SALUDABLE: 179 productos
+2026-06-01 06:04:32,251 [INFO] [KPIs] STOCK CRITICO: 59 productos
+2026-06-01 06:04:32,252 [INFO] [KPIs] AGOTADO: 6 productos
+2026-06-01 06:04:32,252 [INFO] [KPIs] =================================================
+2026-06-01 06:04:32,252 [INFO] [KPIs] Tiempo total de ejecución: 0.05 segundos
+2026-06-01 06:04:32,252 [INFO] =====================================================================
+2026-06-01 06:04:32,252 [INFO] PIPELINE FINALIZADO EXITOSAMENTE - PROCESO COMPLETADO
+2026-06-01 06:04:32,252 [INFO] =====================================================================

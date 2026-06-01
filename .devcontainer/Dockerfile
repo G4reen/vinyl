@@ -7,7 +7,7 @@ WORKDIR /app
 # 3. Copiar primero el archivo de requerimientos para aprovechar la caché de Docker
 COPY requirements.txt .
 
-# 4. Instalar las dependencias del proyecto (pandas)
+# 4. Instalar las dependencias del proyecto
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 5. Copiar todas las carpetas y archivos de tu proyecto al contenedor

@@ -29,3 +29,7 @@ El flujo de software sigue una estructura modular estricta para garantizar la ma
 ├── Dockerfile                      # Definición de la imagen inmutable del entorno
 ├── pipeline.py                     # Orquestador principal y configurador de logging
 └── requirements.txt                # Dependencias estrictas del proyecto
+
+
+Ejecutar comando en la terminal para instalar dependencias (en caso de que lo pida):
+pip install -r requeriments.txt
