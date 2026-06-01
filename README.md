@@ -1,4 +1,6 @@
 # VinylFlow: Pipeline Automatizado de DataOps para Inventario de Vinilos
+Tecnologías usadas:
+ Python, Pandas, SQLite.
 
 Este proyecto implementa un pipeline de datos modular, contenerizado y automatizado bajo los principios de la cultura **DataOps** para la gestión, normalización y aseguramiento de la calidad del inventario de una distribuidora de música y discos de vinilo.
 
@@ -32,4 +34,15 @@ El flujo de software sigue una estructura modular estricta para garantizar la ma
 
 
 Ejecutar comando en la terminal para instalar dependencias (en caso de que lo pida):
-pip install -r requeriments.txt
+
+# Instalar dependencias
+pip install -r requirements.txt
+
+# Ejecutar el pipeline
+python pipeline.py
+
+# Construir la imagen
+docker build -t vinylflow .
+
+# Ejecutar el contenedor
+docker run vinylflow
