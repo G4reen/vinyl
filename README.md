@@ -42,7 +42,7 @@ pip install -r requirements.txt
 python pipeline.py
 
 # Construir la imagen
-docker build -t vinylflow .
+docker build -f .devcontainer/Dockerfile -t vinylflow .
 
 # Ejecutar el contenedor
 docker run vinylflow
