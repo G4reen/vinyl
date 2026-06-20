@@ -1,0 +1,43 @@
+2026-06-20 02:44:59,953 [INFO] =====================================================================
+2026-06-20 02:44:59,953 [INFO] INICIANDO EJECUCIÓN DEL PIPELINE AUTOMATIZADO - VINYLFLOW
+2026-06-20 02:44:59,953 [INFO] =====================================================================
+2026-06-20 02:44:59,953 [INFO] [PIPELINE] ETAPA 1/4: Iniciando proceso de ingesta de datos...
+2026-06-20 02:44:59,953 [INFO] [Ingesta] Leyendo archivo físico desde: data/vinilos.csv
+2026-06-20 02:44:59,957 [INFO] [Ingesta] Ingesta exitosa. Registros leídos del CSV: 252
+2026-06-20 02:44:59,957 [INFO] [PIPELINE] Ingesta finalizada. Registros leidos del origen: 252
+2026-06-20 02:44:59,958 [INFO] ---------------------------------------------------------------------
+2026-06-20 02:44:59,958 [INFO] [PIPELINE] ETAPA 2/4: Iniciando normalizacion y transformacion...
+2026-06-20 02:44:59,958 [INFO] [Transformacion] Iniciando fase de transformacion y normalizacion...
+2026-06-20 02:44:59,970 [INFO] [Transformacion] Finalizada. Columnas actuales: ['sku', 'titulo', 'artista', 'precio_clp', 'stock', 'valor_inventario_total', 'segmento_disponibilidad']
+2026-06-20 02:44:59,971 [INFO] ---------------------------------------------------------------------
+2026-06-20 02:44:59,971 [INFO] [PIPELINE] ETAPA 3/4: Transfiriendo control al modulo de Data Quality...
+2026-06-20 02:44:59,971 [INFO] [DATA QUALITY] Iniciando control de calidad y completitud del set de datos...
+2026-06-20 02:44:59,973 [INFO] [DATA QUALITY] Verificacion Estructural: Esquema de columnas valido.
+2026-06-20 02:44:59,975 [WARNING] [DATA QUALITY] Alerta de Completitud: 3 registros sin titulo detectados. Asignando 'UNKNOWN ALBUM' y exportando traza.
+2026-06-20 02:44:59,981 [WARNING] [DATA QUALITY] Alerta de Completitud: 1 registros sin artista detectados. Asignando 'UNKNOWN ARTIST' y exportando traza.
+2026-06-20 02:44:59,983 [WARNING] [DATA QUALITY] Alerta Semantica: 29 registros con stock negativo detectados. Aplicando regla de imputacion automatica a cero.
+2026-06-20 02:44:59,985 [WARNING] [DATA QUALITY] Alerta Semantica: 10 registros con precio negativo detectados. Aplicando conversion a valor absoluto.
+2026-06-20 02:44:59,987 [INFO] [DATA QUALITY] Enriquecimiento: Columna 'valor_inventario_total' calculada exitosamente.
+2026-06-20 02:44:59,990 [WARNING] [DATA QUALITY] Alerta Semantica: 6 registros descartados por precio equivalente a cero. Detalle en 'logs/anomalias_precios_descartados.log'.
+2026-06-20 02:45:00,002 [INFO] [DATA QUALITY] Control de calidad finalizado correctamente.
+2026-06-20 02:45:00,002 [INFO] [PIPELINE] Data Quality finalizado. Registros aptos para produccion: 244
+2026-06-20 02:45:00,005 [INFO] ---------------------------------------------------------------------
+2026-06-20 02:45:00,005 [INFO] [PIPELINE] ETAPA 4/4: Iniciando carga incremental de datos...
+2026-06-20 02:45:00,030 [INFO] [Carga] Se encontraron 244 registros existentes en la base de datos.
+2026-06-20 02:45:00,036 [INFO] [Carga] Registros tras deduplicación incremental: 244
+2026-06-20 02:45:00,127 [INFO] [PIPELINE] Carga incremental exitosa. Total registros en BD: 244. Destino: data/dw_vinylflow.db
+2026-06-20 02:45:00,128 [INFO] [KPIs] ========== MÉTRICAS DE LA EJECUCIÓN ==========
+2026-06-20 02:45:00,129 [INFO] [KPIs] Registros válidos: 244 / 252 (96.8%)
+2026-06-20 02:45:00,129 [INFO] [KPIs] Registros descartados: 8
+2026-06-20 02:45:00,130 [INFO] [KPIs] Valor total del inventario procesado: $93,119,790 CLP
+2026-06-20 02:45:00,131 [INFO] [KPIs] STOCK SALUDABLE: 179 productos
+2026-06-20 02:45:00,133 [INFO] [KPIs] STOCK CRITICO: 59 productos
+2026-06-20 02:45:00,133 [INFO] [KPIs] AGOTADO: 6 productos
+2026-06-20 02:45:00,134 [INFO] [KPIs] =================================================
+2026-06-20 02:45:00,134 [INFO] [KPIs] Tiempo total de ejecución: 0.18 segundos
+2026-06-20 02:45:00,134 [INFO] =====================================================================
+2026-06-20 02:45:00,134 [INFO] PIPELINE FINALIZADO EXITOSAMENTE - PROCESO COMPLETADO
+2026-06-20 02:45:00,134 [INFO] =====================================================================
+2026-06-20 02:45:00,134 [INFO] [PIPELINE] ETAPA 5/5: Iniciando entrenamiento del modelo de IA...
+2026-06-20 02:45:03,289 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-20 02:45:03,305 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.

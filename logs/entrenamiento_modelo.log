@@ -1,0 +1,87 @@
+02:45:00 [INFO] ----------------------------------------------------------------------
+02:45:00 [INFO] INICIANDO ETAPA 5: ENTRENAMIENTO Y EVALUACIÓN DEL MODELO DE IA
+02:45:00 [INFO] ----------------------------------------------------------------------
+02:45:00 [INFO] Cargando datos validados desde el Data Warehouse...
+02:45:00 [INFO] Registros cargados: 244
+02:45:00 [INFO] ----------------------------------------------------------------------
+02:45:00 [INFO] ETAPA 5.1 — PREPARACIÓN DEL DATASET PARA MODELADO
+02:45:00 [INFO] ----------------------------------------------------------------------
+02:45:00 [INFO] Recalculando segmento_disponibilidad con stock final (corrección de bug Fase 1)...
+02:45:00 [WARNING] Registros con segmento corregido respecto a Fase 1: 29
+02:45:00 [INFO] Variable objetivo 'riesgo_quiebre_stock' -> Sin riesgo: 179 | Con riesgo: 65
+02:45:00 [INFO] ----------------------------------------------------------------------
+02:45:00 [INFO] ETAPA 5.2 — ANÁLISIS DE CALIDAD DE DATOS (nulos, moda, percentiles)
+02:45:00 [INFO] ----------------------------------------------------------------------
+02:45:00 [INFO] Nulos detectados: 0 (ya imputados en Fase 1 - Data Quality: 'UNKNOWN ARTIST'/'UNKNOWN ALBUM' en categóricos, precio/stock negativos corregidos)
+02:45:00 [INFO] precio_clp           moda=  34000.00 | P10=  33000.00 P25=  34000.00 P50=  36000.00 P75=  38000.00 P90=  42000.00
+02:45:00 [INFO] frecuencia_artista   moda=      4.00 | P10=      2.00 P25=      3.00 P50=      4.00 P75=      5.00 P90=      7.00
+02:45:00 [INFO] ----------------------------------------------------------------------
+02:45:00 [INFO] ETAPA 5.3 — ANÁLISIS UNIVARIADO
+02:45:00 [INFO] ----------------------------------------------------------------------
+02:45:00 [INFO] precio_clp           media=  36503.81 mediana=  36000.00 std=  5108.86 min=   5000.00 max=  65000.00
+02:45:00 [INFO] frecuencia_artista   media=      4.13 mediana=      4.00 std=     1.65 min=      1.00 max=      7.00
+02:45:00 [INFO] Distribución riesgo_quiebre_stock -> Sin riesgo: 73.4% | Con riesgo: 26.6%
+02:45:03 [INFO] ----------------------------------------------------------------------
+02:45:03 [INFO] ETAPA 5.4 — ANÁLISIS BIVARIADO Y MATRIZ DE CORRELACIÓN
+02:45:03 [INFO] ----------------------------------------------------------------------
+02:45:03 [INFO]                        Precio  Popularidad artista  Riesgo quiebre
+02:45:03 [INFO]   Precio                1.000                0.187          -0.027
+02:45:03 [INFO]   Popularidad artista   0.187                1.000           0.008
+02:45:03 [INFO]   Riesgo quiebre       -0.027                0.008           1.000
+02:45:04 [INFO] ----------------------------------------------------------------------
+02:45:04 [INFO] ETAPA 5.5 — PARTICIÓN Y ESCALAMIENTO DE DATOS
+02:45:04 [INFO] ----------------------------------------------------------------------
+02:45:04 [INFO] Train: 183 registros (75%) | Test: 61 registros (25%) | stratify=y
+02:45:04 [INFO] ----------------------------------------------------------------------
+02:45:04 [INFO] ETAPA 5.6 — JUSTIFICACIÓN DE ELECCIÓN DE ALGORITMOS
+02:45:04 [INFO] ----------------------------------------------------------------------
+02:45:04 [INFO] 1) Regresion_Logistica: modelo lineal interpretable, bajo riesgo de sobreajuste
+02:45:04 [INFO]    en un dataset pequeño (244 registros). Se usa como modelo BASE/baseline.
+02:45:04 [INFO] 2) Random_Forest: ensamble no lineal, capaz de capturar interacciones entre
+02:45:04 [INFO]    variables. max_depth=4 limita el sobreajuste. Verifica si una relación
+02:45:04 [INFO]    no lineal mejora el resultado respecto al baseline.
+02:45:04 [INFO] Ambos usan class_weight='balanced' (clase riesgo=1 es solo ~27% de los datos).
+02:45:04 [INFO] Criterio de selección final: mayor AUC en test (robusto frente a clases desbalanceadas).
+02:45:04 [INFO] ----------------------------------------------------------------------
+02:45:04 [INFO] RESULTADOS — Regresion_Logistica
+02:45:04 [INFO] ----------------------------------------------------------------------
+02:45:04 [INFO] Accuracy=0.508  Precision=0.281  Recall=0.562  F1=0.375  AUC=0.513  Gini=0.026
+02:45:04 [INFO] Matriz de confusión:
+02:45:04 [INFO]                     Pred: Sin riesgo  Pred: Con riesgo
+02:45:04 [INFO]   Real: Sin riesgo                22                23
+02:45:04 [INFO]   Real: Con riesgo                 7                 9
+02:45:04 [INFO] Reporte de clasificación:
+02:45:04 [INFO]                 precision    recall  f1-score   support
+02:45:04 [INFO]     Sin riesgo       0.76      0.49      0.59        45
+02:45:04 [INFO]     Con riesgo       0.28      0.56      0.38        16
+02:45:04 [INFO]       accuracy                           0.51        61
+02:45:04 [INFO]      macro avg       0.52      0.53      0.48        61
+02:45:04 [INFO]   weighted avg       0.63      0.51      0.54        61
+02:45:04 [INFO] ----------------------------------------------------------------------
+02:45:04 [INFO] RESULTADOS — Random_Forest
+02:45:04 [INFO] ----------------------------------------------------------------------
+02:45:04 [INFO] Accuracy=0.590  Precision=0.263  Recall=0.312  F1=0.286  AUC=0.458  Gini=-0.085
+02:45:04 [INFO] Matriz de confusión:
+02:45:04 [INFO]                     Pred: Sin riesgo  Pred: Con riesgo
+02:45:04 [INFO]   Real: Sin riesgo                31                14
+02:45:04 [INFO]   Real: Con riesgo                11                 5
+02:45:04 [INFO] Reporte de clasificación:
+02:45:04 [INFO]                 precision    recall  f1-score   support
+02:45:04 [INFO]     Sin riesgo       0.74      0.69      0.71        45
+02:45:04 [INFO]     Con riesgo       0.26      0.31      0.29        16
+02:45:04 [INFO]       accuracy                           0.59        61
+02:45:04 [INFO]      macro avg       0.50      0.50      0.50        61
+02:45:04 [INFO]   weighted avg       0.61      0.59      0.60        61
+02:45:04 [INFO] ----------------------------------------------------------------------
+02:45:04 [INFO] MODELO SELECCIONADO POR MEJOR AUC: Regresion_Logistica
+02:45:04 [INFO] ----------------------------------------------------------------------
+02:45:07 [INFO] ----------------------------------------------------------------------
+02:45:07 [INFO] RESUMEN FINAL
+02:45:07 [INFO] ----------------------------------------------------------------------
+02:45:07 [INFO] Modelo                  Accuracy  Precision   Recall      F1     AUC    Gini
+02:45:07 [INFO] Regresion_Logistica        0.508      0.281    0.562   0.375   0.513   0.026 <- recomendado
+02:45:07 [INFO] Random_Forest              0.590      0.263    0.312   0.286   0.458  -0.085
+02:45:07 [INFO] Gráficos y métricas exportados en 'modelo/resultados/'
+02:45:07 [INFO] ----------------------------------------------------------------------
+02:45:07 [INFO] ENTRENAMIENTO FINALIZADO
+02:45:07 [INFO] ----------------------------------------------------------------------
