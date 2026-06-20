@@ -8,6 +8,7 @@ from datetime import datetime
 from ingestion.ingesta import cargar_catalogo_vinilos
 from procesamiento.transformacion import limpiar_datos_vinilos
 from data_quality.validador import validar_calidad_vinilos
+from modelo.entrenamiento import ejecutar_entrenamiento
 
 # Asegurar directorios locales
 os.makedirs("logs", exist_ok=True)
@@ -138,6 +139,13 @@ def orquestar_pipeline():
         logging.info("=====================================================================")
         logging.info("PIPELINE FINALIZADO EXITOSAMENTE - PROCESO COMPLETADO")
         logging.info("=====================================================================")
+
+        # ETAPA 5: ENTRENAMIENTO Y EVALUACIÓN DEL MODELO DE IA
+        logging.info("[PIPELINE] ETAPA 5/5: Iniciando entrenamiento del modelo de IA...")
+        try:
+            ejecutar_entrenamiento()
+        except Exception as e:
+            logging.error(f"[PIPELINE] Error en la etapa de entrenamiento del modelo: {str(e)}")
 
     except Exception as e:
         logging.critical(f"[CRITICAL] Falla catastrófica en el flujo automatizado: {str(e)}")
